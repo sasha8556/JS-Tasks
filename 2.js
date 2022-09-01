@@ -70,32 +70,33 @@ console.log(gender);
 // При этом вместо чисел, кратных трем, программа должна выводить слово «Fizz», а вместо чисел, кратных пяти, — слово «Buzz». Если число кратно и 3, и 5, то программа должна выводить слово «FizzBuzz»
 
 
-// for (let i = 0; i < 100; i++) {
-//     if (i % 3 === 0 && i % 5 === 0) {
-//         console.log('Fizz');
-//     } else if (i % 3 === 0) {
-//         console.log('Buzz');
-//     } else if (i % 5 === 0) {
-//         console.log('FizzBuzz');
-//     } else {
-//         console.log(i);
-//     }
-// }
+for (let i = 0; i < 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('Fizz');
+    } else if (i % 3 === 0) {
+        console.log('Buzz');
+    } else if (i % 5 === 0) {
+        console.log('FizzBuzz');
+    } else {
+        console.log(i);
+    }
+}
 
 
 // Задание 6
 
 // Перепишите код, заменив цикл for на while, без изменения поведения цикла.
-// for (let i = 0; i < 3; i++) {
-// alert( `number ${i}!` );
-// }
+
+for (let i = 0; i < 3; i++) {
+    alert(`number ${i}!`);
+}
 
 
-// let i = 0;
-// while (i < 3) {
-//     i++;
-//     alert(`number ${i}!`);
-// }
+let i = 0;
+while (i < 3) {
+    i++;
+    alert(`number ${i}!`);
+}
 
 
 
@@ -113,6 +114,10 @@ function squareSum(num) {
 }
 squareSum(5);
 
+const squareSum = (min, max) => {
+
+}
+
 
 // Задание 8
 
@@ -126,15 +131,12 @@ squareSum(5);
 // Одна функция может вызывать другую функцию
 
 
-function getRandomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-getRandomInteger(0, 250);
+const getRandomInteger = (min, max) =>
+    Math.floor(Math.random() * (max - min)) + min;
 
-function getRandomRGB() {
+getRandomInteger(0, 255);
 
-}
-console.log(`rgb(${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)})`);
+const createRandonColor = () => `rgb(${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)})`
 
 
 // Задание 9
